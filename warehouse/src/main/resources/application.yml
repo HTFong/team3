@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=Warehouse;trustServerCertificate=true;encrypt=true;
+    username: sa
+    password: 123456
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.SQLServer2008Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
