@@ -2,11 +2,11 @@ spring:
   datasource:
     url: jdbc:sqlserver://localhost:1433;databaseName=Warehouse;trustServerCertificate=true;encrypt=true;
     username: sa
-    password: 123456
+    password: 123456789
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
     properties:
       hibernate:

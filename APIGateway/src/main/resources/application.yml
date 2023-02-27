@@ -9,4 +9,8 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/api/v1/**
+        - id: WareHouse_Service
+          uri: http://localhost:8080
+          predicates:
+              - Path=/api/warehouse/**
 
