@@ -14,6 +14,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class OrderDetail {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(columnDefinition = "nvarchar(500)")

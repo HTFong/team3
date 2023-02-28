@@ -23,7 +23,7 @@ public class OrderDetailController {
         //process db
         // convert dto to entity + save
         OrderDetail entity = new OrderDetail();
-        entity.setId(orderDto.getId());
+     //   entity.setId(orderDto.getId());
         entity.setQuantity(orderDto.getQuantity());
         entity.setProductId(orderDto.getProductId());
         entity.setStatus(orderDto.getStatus());
