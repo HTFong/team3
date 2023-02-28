@@ -29,15 +29,21 @@ public class ProductController {
     @GetMapping("/order/{productId}")
     public String buyProduct(@PathVariable Long productId, Model model) {
         if (productService.checkQuantity(productId, 1)) {
-            Order order = new Order(null, "Name Order", "Nghệ An", 1L, new Product(productId, null, null, null, null), Status.PENDING);
+            Product product = productService.getProductById(productId);
+            Order order = new Order(null, "Nguyen Tuan Kiet", "HCM", product.getPrice(), new Product(productId, null, null, null, null), Status.PENDING);
+            System.out.println(order);
             String result = productService.saveOrder(order);
             List<Order> orders = productService.getOrders();
             model.addAttribute("orders", orders);
             return "orders";
         } else {
-            List<Product> products = productService.getProducts();
-            model.addAttribute("products", products);
-            return "products";
+            Product product = productService.getProductById(productId);
+            Order order = new Order(null, "Nguyen Tuan Kiet", "HCM", product.getPrice(), new Product(productId, null, null, null, null), Status.FAILED);
+            System.out.println(order);
+            String result = productService.saveOrder(order);
+            List<Order> orders = productService.getOrders();
+            model.addAttribute("orders", orders);
+            return "orders";
         }
     }
 }

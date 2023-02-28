@@ -16,4 +16,9 @@ public class ProductServiceIplm implements ProductService {
     public List<ProductDto> getAll() {
         return Mapper.mapAll(productRepository.findAll(),ProductDto.class);
     }
+
+    @Override
+    public ProductDto getProduct(Long id) {
+        return Mapper.map(productRepository.findById(id).get(), ProductDto.class);
+    }
 }

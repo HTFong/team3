@@ -11,12 +11,14 @@
         <module name="APIGateway" />
         <module name="Course_Service" />
         <module name="ecommerce" />
+        <module name="fe" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="APIGateway" target="17" />
       <module name="Course_Service" target="17" />
       <module name="ecommerce" target="17" />
+      <module name="fe" target="17" />
       <module name="Sell_Service" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -26,6 +28,7 @@
       <module name="Course_Service" options="-parameters" />
       <module name="Sell_Service" options="-parameters" />
       <module name="ecommerce" options="-parameters" />
+      <module name="fe" options="-parameters" />
     </option>
   </component>
 </project>

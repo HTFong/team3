@@ -49,4 +49,13 @@ public class ProductService implements IProductService {
             return null;
         }
     }
+
+    @Override
+    public Product getProductById(Long id) {
+        String url = "http://localhost:8082/api/v1/product/"+id;
+        ResponseEntity<Product> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null,
+                new ParameterizedTypeReference<Product>() {
+                });
+        return responseEntity.getBody();
+    }
 }

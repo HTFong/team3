@@ -20,7 +20,7 @@ public class OrderServiceIplm implements OrderService {
     @Override
     public void save(OrderDto orderDto) {
         Order order=Mapper.map(orderDto, Order.class);
-        order.setStatus(EOrderStatus.PENDING);
+//        order.setStatus(EOrderStatus.PENDING);
         order.setProduct(productRepository.findById(orderDto.getProduct().getId()).get());
         orderRepository.save(order);
     }

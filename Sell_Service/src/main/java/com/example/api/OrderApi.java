@@ -27,6 +27,7 @@ public class OrderApi {
     @PostMapping
     public ResponseEntity<String> create(@RequestBody OrderDto orderDto) {
         try {
+            //send message broker to warehouse
             orderService.save(orderDto);
             return new ResponseEntity<>("success", HttpStatus.OK);
         } catch (Exception e) {

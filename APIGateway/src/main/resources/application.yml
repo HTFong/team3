@@ -12,5 +12,5 @@ spring:
         - id: WareHouse_Service
           uri: http://localhost:8080
           predicates:
-              - Path=/api/warehouse/**
+            - Path=/api/warehouse/**
 

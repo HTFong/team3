@@ -13,4 +13,5 @@ public interface IProductService {
     List<Order> getOrders();
 
     String saveOrder(Order order);
+    Product getProductById(Long id);
 }
